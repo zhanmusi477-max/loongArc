@@ -1,0 +1,10 @@
+workflow:
+  rules:
+    - if: '$CI_COMMIT_BRANCH == "main"'
+      when: never
+    - when: always
+
+include:
+  - project: 'nscscc2026_grs/template/ci-template'
+    ref: 'main'
+    file: '/bitstream.yml'
